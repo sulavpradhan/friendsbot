@@ -1,0 +1,37 @@
+.centerdiv{
+    margin: 0 auto;
+    display: inline-block;
+
+}
+#Card{
+    /* box-sizing: border-box; */
+    background-color: #12232E;
+    height: 300px;
+    width: 200px;
+    padding: 50px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 25px;
+    margin: 5px;
+    text-align: center;
+    transition: transform .2s;
+    float: left;
+    box-shadow: 5px 5px 2.5px grey;
+}
+#cardtext{
+    color: white;
+
+}
+#Card:hover{
+    transform: scale(1.025); 
+}
+#dp{
+    width: 200px;
+    height: 200px;
+    background-color: #4DA8DA;
+    border-radius: 100px;
+
+}
+#email{
+    text-align: ;
+}
