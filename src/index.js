@@ -3,12 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
+import Blog from './Blog';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import 'tachyons';
 
 ReactDOM.render(
   <React.StrictMode>
-    <div>      
-      <App />
+    <div>  
+      <Router>   
+        <Switch> 
+          <Route path="/" exact  component={App} />
+          <Route path="/Blog"  component={Blog}/>
+        </Switch> 
+      </Router>
+
+     
     </div>
     
   </React.StrictMode>,

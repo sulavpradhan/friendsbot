@@ -4,6 +4,9 @@ import CardsArray from './CardsArray';
 import SearchBox from './SearchBox';
 import {robots} from './robots';
 import './App.css';
+// import Blog from './Blog';
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 
 
 class App extends Component{
@@ -18,7 +21,7 @@ class App extends Component{
  
     onSearchChange = (event) =>{
         this.setState({searchfield: event.target.value})
-        // console.log(event.target.value)
+        console.log(event.target.value)
        
     }
     render(){
@@ -27,18 +30,19 @@ class App extends Component{
             return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
           })
         return(
-            <div>
-                <h1>ROBOFRIENDS</h1>
+            // <Router>
                 <div>
+                    {/* <Switch> */}
+                        <h1>ROBOFRIENDS</h1>
+                        <SearchBox searchChange = {this.onSearchChange} />
+                        <CardsArray robots ={filteredRobots}/>
+                        {/* <Route path="/Blog"  component={Blog}/>  */}
+                    {/* </Switch> */}
+                    
 
-                 <SearchBox seachChange = {this.onSearchChange} />
-
+                    
                 </div>
-                
-                <CardsArray robots ={filteredRobots}/>
-
-                
-            </div>
+            // </Router>
         );
     }
 }
